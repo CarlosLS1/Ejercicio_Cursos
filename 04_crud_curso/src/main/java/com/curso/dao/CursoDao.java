@@ -15,7 +15,7 @@ public interface CursoDao extends JpaRepository<Curso, Integer> {
 	List<Curso> cursoPrecios (int preciomin, int preciomax);	
 	
 	@Modifying
-	@Query(value="UPDATE cursos set duracioncurso = ?1 where codigocurso = ?2", nativeQuery=true)
-	void actualizacionHorasCurso (int duracionCurso, int codigoCurso);	
+	@Query(value="UPDATE cursos set duracioncurso = ?2 where codigocurso = ?1", nativeQuery=true)
+	void actualizacionHorasCurso (int codigoCurso, int duracionCurso);	
 	
 }

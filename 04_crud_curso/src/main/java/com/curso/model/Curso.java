@@ -1,5 +1,6 @@
 package com.curso.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -16,17 +17,15 @@ public class Curso {
 	
 	@Id
 	private int codigoCurso;
+	@Column(name="nombrecurso")
 	private String nombreCurso;
+	@Column(name="duracioncurso")
 	private int duracionCurso;
+	@Column(name="precio")
 	private double precio;
 	
 	public Curso() {
 
-	}
-	public Curso(int duracionCurso, int codigoCurso) {
-		this.duracionCurso = duracionCurso;
-		this.codigoCurso = codigoCurso;
-		
 	}
 	
 

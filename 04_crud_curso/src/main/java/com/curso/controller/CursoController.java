@@ -36,9 +36,9 @@ public class CursoController {
 		
 	}
 	//http://localhost:8080/curso
-	@PutMapping(value="curso", consumes=MediaType.APPLICATION_JSON_VALUE)
-	public void actualizarCurso(@RequestBody Curso curso){
-		service.actualizarCurso(curso.getDuracionCurso(), curso.getCodigoCurso());
+	@PutMapping(value="curso/{codigocurso}/{duracioncurso}", consumes=MediaType.APPLICATION_JSON_VALUE)
+	public void actualizarCurso(@PathVariable("codigocurso") int codigoCurso, @PathVariable("duracioncurso") int duracioncurso){
+		service.actualizarCurso(codigoCurso, duracioncurso);
 	}
 	
 	//http://localhost:8080/curso/4
@@ -48,7 +48,6 @@ public class CursoController {
 		return service.listaCursos();
 		
 	}
-	
 	
 	@GetMapping(value="curso/{preciomin}/{preciomax}", produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<Curso> cursoPrecios(@PathVariable("preciomin") int preciomin, @PathVariable("preciomax") int preciomax){
