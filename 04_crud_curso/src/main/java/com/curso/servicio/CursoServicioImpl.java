@@ -37,8 +37,8 @@ public class CursoServicioImpl implements CursoServicio {
 	}
 
 	@Override
-	public void actualizarCurso(int codigoCurso, int duracionCurso ) {
-		dao.actualizacionHorasCurso(codigoCurso, duracionCurso);
+	public void actualizarCurso(Curso curso) {
+		dao.actualizacionHorasCurso(curso.getCodigoCurso(), curso.getDuracionCurso());
 
 	}
 

@@ -10,7 +10,7 @@ public interface CursoServicio {
 	Curso buscarCurso(int codigoCurso);
 	List<Curso> eliminarCurso(int codigoCurso);
 	List<Curso> crearCurso(Curso curso);
-	void actualizarCurso(int codigoCurso, int duracionCurso);
+	void actualizarCurso(Curso curso);
 	List<Curso> cursoPrecios(int precio1,  int precio2);
 	
 }

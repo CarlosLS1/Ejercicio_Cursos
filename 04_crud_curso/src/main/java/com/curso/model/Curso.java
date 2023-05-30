@@ -27,7 +27,6 @@ public class Curso {
 	public Curso() {
 
 	}
-	
 
 	public Curso(int codigoCurso, String nombreCurso, int duracionCurso, double precio) {
 		this.codigoCurso = codigoCurso;
@@ -35,6 +34,7 @@ public class Curso {
 		this.duracionCurso = duracionCurso;
 		this.precio = precio;
 	}
+	
 	public int getCodigoCurso() {
 		return codigoCurso;
 	}
